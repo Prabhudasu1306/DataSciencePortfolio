@@ -168,7 +168,7 @@
       cursor: pointer;
     }
 
-    /* Hero Section */
+    
     .hero {
       min-height: 100vh;
       display: flex;
@@ -199,6 +199,13 @@
       font-size: 1.5rem;
       color: var(--text-muted);
       margin-bottom: 2rem;
+    }
+
+    .professional-title {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
     .hero-cta {
@@ -241,7 +248,7 @@
       color: var(--primary);
     }
 
-    /* About Section */
+   
     .about-content {
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -249,10 +256,18 @@
       align-items: center;
     }
 
+    .profile-img-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
     .profile-img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 20px;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
@@ -265,7 +280,6 @@
       font-size: 1.1rem;
     }
 
-    /* GitHub Stats */
     .github-stats {
       display: flex;
       justify-content: center;
@@ -295,7 +309,6 @@
       font-size: 0.9rem;
     }
 
-    /* Education & Skills */
     .timeline {
       position: relative;
       max-width: 800px;
@@ -400,8 +413,6 @@
       color: var(--accent);
       margin-right: 10px;
     }
-
-    /* Skills Progress Bars */
     .skill-progress {
       margin-top: 10px;
       background: rgba(255, 255, 255, 0.1);
@@ -415,8 +426,6 @@
       background: var(--gradient);
       border-radius: 4px;
     }
-
-    /* Projects Section - UPDATED */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -556,8 +565,6 @@
       margin-right: 10px;
       color: var(--accent);
     }
-
-    /* Contact Section */
     .contact-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -609,15 +616,11 @@
       background: var(--gradient);
       transform: translateY(-5px);
     }
-
-    /* Footer */
     footer {
       background: var(--secondary);
       padding: 30px 0;
       text-align: center;
     }
-
-    /* Scroll to Top Button */
     .scroll-top {
       position: fixed;
       bottom: 30px;
@@ -648,7 +651,6 @@
       transform: translateY(-5px);
     }
 
-    /* Responsive Design */
     @media (max-width: 992px) {
       h1 {
         font-size: 3rem;
@@ -740,14 +742,18 @@
         width: 100%;
         max-width: 250px;
       }
+      
+      .profile-img {
+        width: 220px;
+        height: 220px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <div class="container">
-      <div class="logo">P.P.</div>
+      <div class="logo"></div>
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
       </div>
@@ -762,42 +768,43 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <h1>Prabhudasu Parusu</h1>
-        <p class="hero-subtitle">Spring Data, AI, and Full Stack Developer</p>
-        <p>Building robust, scalable applications and leveraging cutting-edge AI technologies to solve complex problems.</p>
+        <p class="professional-title">Data Scientist & Full Stack Developer</p>
+        <p class="hero-subtitle">Specializing in Machine Learning, NLP, and Computer Vision</p>
+        <p>Creating intelligent solutions that bridge AI innovation with practical application development.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View My Work</a>
           <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <div class="section-title">
         <h2>About Me</h2>
       </div>
       <div class="about-content">
-        <div>
-          <img src="Image.png" alt="Profile Picture" class="profile-img">
+        <div class="profile-img-container">
+          <img src="Image.png" alt="Prabhudasu Parusu - Data Scientist and Developer" class="profile-img">
         </div>
         <div class="about-text">
-          <p>I am a results-driven <b>Spring Data, AI, and Full Stack Developer</b>. I have expertise in <b>Java, Spring Boot, React, SQL, and Python</b>, with a strong background in <b>Data Science, Machine Learning, NLP, and Computer Vision</b>.</p>
-          <p>I am passionate about building robust, scalable applications and leveraging cutting-edge AI technologies to solve complex problems.</p>
-          <p>My GitHub profile showcases my dedication to open-source contributions and continuous learning in the field of software development and AI.</p>
+          <p>I am a passionate <b>Data Scientist and Full Stack Developer</b> with expertise in building end-to-end solutions that combine cutting-edge AI capabilities with robust software engineering. My technical proficiency spans <b>Python, Java, Spring Boot, React, and SQL</b>, with specialized knowledge in <b>Machine Learning, NLP, Computer Vision, and Generative AI</b>.</p>
+          <p>I excel at transforming complex data into actionable insights and developing scalable applications that solve real-world problems. My projects demonstrate a unique blend of analytical rigor and software development best practices.</p>
+          <p>Currently seeking opportunities to leverage my dual expertise in data science and full-stack development to build innovative products that make a meaningful impact.</p>
         </div>
       </div>
 
-      <!-- GitHub Stats -->
       <div class="github-stats">
         <div class="stat-card">
-          <div class="stat-number" id="repo-count">20+</div>
+          <div class="stat-number" id="repo-count">30+</div>
           <div class="stat-label">Repositories</div>
         </div>
         <div class="stat-card">
@@ -822,7 +829,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <div class="section-title">
@@ -832,22 +838,22 @@
         <div class="skill-category">
           <h3><i class="fas fa-brain"></i> AI/ML & Data Science</h3>
           <ul class="skill-list">
-            <li>Machine Learning
+            <li>Machine Learning And Data Science(NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, PyTorch, SciPy)
               <div class="skill-progress">
                 <div class="skill-progress-bar" style="width: 90%"></div>
               </div>
             </li>
-            <li>Deep Learning
+            <li>Deep Learning(TensorFlow, Keras, PyTorch)
               <div class="skill-progress">
                 <div class="skill-progress-bar" style="width: 85%"></div>
               </div>
             </li>
-            <li>NLP
+            <li>NLP(NLTK, spaCy, Gensim, Transformers, Hugging Face, TextBlob)
               <div class="skill-progress">
                 <div class="skill-progress-bar" style="width: 88%"></div>
               </div>
             </li>
-            <li>Computer Vision
+            <li>Computer Vision(OpenCV, PyTorch, TensorFlow, Keras, Fastai)
               <div class="skill-progress">
                 <div class="skill-progress-bar" style="width: 82%"></div>
               </div>
@@ -992,8 +998,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Projects Section - UPDATED -->
   <section id="projects">
     <div class="container">
       <div class="section-title">
@@ -1001,7 +1005,6 @@
         <p>Here are some of my notable projects showcasing my skills in AI, web development, and data science</p>
       </div>
       <div class="projects-grid">
-        <!-- Project 1 -->
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">AI-Powered Healthcare Assistant (RAG-based)</h3>
@@ -1042,8 +1045,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Project 2 -->
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Sherehe – Event Organization App</h3>
@@ -1084,8 +1085,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Project 3: Named Entity Recognition -->
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Named Entity Recognition (NER) using NLP</h3>
@@ -1131,8 +1130,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Project 4: Face & Eye Detection -->
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Real-Time Face & Eye Detection (Flask + OpenCV)</h3>
@@ -1178,7 +1175,7 @@
           </div>
         </div>
 
-        <!-- Project 5: Lung Cancer Detection -->
+       
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Lung Cancer Detection (Machine Learning)</h3>
@@ -1224,7 +1221,7 @@
           </div>
         </div>
 
-        <!-- Project 6: Customer Segmentation -->
+        
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Customer Segmentation (Clustering)</h3>
@@ -1271,7 +1268,7 @@
           </div>
         </div>
 
-        <!-- Project 7: Market Analysis -->
+        
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Market Analysis using Polynomial Regression</h3>
@@ -1318,7 +1315,7 @@
           </div>
         </div>
 
-        <!-- Project 8: Resume Tracking System -->
+        
         <div class="project-card">
           <div class="project-content">
             <h3 class="project-title">Resume Tracking System (Flask + NLP)</h3>
@@ -1374,7 +1371,7 @@
     </div>
   </section>
 
-  <!-- Education Section -->
+  
   <section id="education">
     <div class="container">
       <div class="section-title">
@@ -1399,7 +1396,7 @@
     </div>
   </section>
 
-  <!-- Certifications Section -->
+
   <section id="certifications">
     <div class="container">
       <div class="section-title">
@@ -1442,7 +1439,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  
   <section id="contact">
     <div class="container">
       <div class="section-title">
@@ -1499,32 +1496,27 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2023 Prabhudasu Parusu. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
   <div class="scroll-top">
     <i class="fas fa-arrow-up"></i>
   </div>
 
   <script>
-    // Mobile menu toggle
     document.querySelector('.menu-btn').addEventListener('click', function() {
       document.querySelector('.nav-links').classList.toggle('active');
     });
     
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('active');
       });
     });
 
-    // Scroll to top functionality
     const scrollTopBtn = document.querySelector('.scroll-top');
     
     window.addEventListener('scroll', () => {
@@ -1542,7 +1534,6 @@
       });
     });
 
-    // Animate skill progress bars when they come into view
     const skillProgressBars = document.querySelectorAll('.skill-progress-bar');
     
     const observer = new IntersectionObserver((entries) => {
